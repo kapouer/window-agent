@@ -1,0 +1,24 @@
+{
+  "name": "window-agent",
+  "version": "1.0.0",
+  "description": "Simple browser xhr agent supporting json, dom, text, and url formatting",
+  "main": "agent.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kapouer/window-agent.git"
+  },
+  "keywords": [
+    "xhr",
+    "agent",
+    "dom"
+  ],
+  "author": "Jérémy Lal <kapouer@melix.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kapouer/window-agent/issues"
+  },
+  "homepage": "https://github.com/kapouer/window-agent#readme"
+}
