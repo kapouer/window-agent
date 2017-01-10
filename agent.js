@@ -25,12 +25,18 @@
 		}
 		if (!query) query = {};
 		var promise;
-		if (!cb) promise = new Promise(function(resolve, reject) {
-			cb = function(err, data) {
-				if (err) reject(err);
-				else resolve(data);
-			};
-		});
+		if (!cb) {
+			if (Promise) promise = new Promise(function(resolve, reject) {
+				cb = function(err, data) {
+					if (err) reject(err);
+					else resolve(data);
+				};
+			}); else {
+				cb = function(err, data) {
+					if (err) console.error(err);
+				};
+			}
+		}
 		var opts = {};
 		if (url.url) {
 			opts = url;
