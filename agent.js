@@ -110,7 +110,7 @@
 				if (code >= 200 && code < 400) {
 					cb(null, response);
 				} else {
-					err = new Error(response || ex || "unreadable response");
+					err = new Error(response || "unreadable response");
 					err.code = code;
 					cb(err);
 				}
