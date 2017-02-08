@@ -101,10 +101,10 @@
 					try { response = this.responseXML; } catch(e) { ex = e; }
 				}
 				if (!response) {
-					try { response = JSON.parse(this.responseText); } catch(e) { ex = e; }
-				}
-				if (!response) {
-					response = this.responseText;
+					try { response = this.responseText; } catch(e) { ex = e; }
+					if (response) {
+						try { response = JSON.parse(response); } catch(e) { ex = e; }
+					}
 				}
 
 				if (code >= 200 && code < 400) {
