@@ -1,6 +1,6 @@
 {
   "name": "window-agent",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple browser xhr agent supporting json, dom, text, and url formatting",
   "main": "agent.js",
   "scripts": {
