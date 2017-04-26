@@ -36,8 +36,8 @@ window.GET("/api/mycollection/:id", {
 
 window.POST("/api/mycollection/:id", {
 	id: 45 // can replace variables in url
-}, {
-	somekey: data // body
+}, { // body, can also be already json since vers 1.1
+	somekey: data
 }, function(err, result) {
 	// supports callback style as well
 });
