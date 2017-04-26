@@ -132,7 +132,9 @@
 				multipart: 'multipart/form-data'
 			}[type];
 			if (contentType) xhr.setRequestHeader('Content-Type', contentType);
-			if (type == 'json') body = JSON.stringify(body);
+			if (type == 'json' && (typeof body != "string" || /"|\[|{/.test(body[0]) == false)) {
+				body = JSON.stringify(body);
+			}
 			xhr.send(body);
 		} else {
 			xhr.send();
