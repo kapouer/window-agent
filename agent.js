@@ -110,8 +110,9 @@
 				if (code >= 200 && code < 400) {
 					cb(null, response);
 				} else {
-					err = new Error(response || "unreadable response");
+					err = new Error(this.responseText || "Empty response");
 					err.code = code;
+					if (response && this.responseText != response) err.response = response;
 					cb(err);
 				}
 			}
